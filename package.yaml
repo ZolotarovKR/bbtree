@@ -11,6 +11,9 @@ extra-source-files:  []
 # description:         Please see the README on GitHub at <https://github.com/ZolotarovKR/bbtree#readme>
 dependencies:
 - base >= 4.7 && < 5
+- tasty
+- tasty-quickcheck
+- tasty-hunit
 
 ghc-options:
 - -Wall
@@ -36,3 +39,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - bbtree
+    - tasty
+    - tasty-quickcheck
+    - tasty-hunit

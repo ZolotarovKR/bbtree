@@ -1,5 +1,8 @@
 module BB.Set
   ( Set,
+    -- BALANCE PARAMETERS
+    omega,
+    alpha,
     -- CONSTRUCTORS
     empty,
     singleton,
@@ -221,7 +224,7 @@ instance Foldable Set where
 
 toAscList :: Set a -> [a]
 toAscList Nil = []
-toAscList (Node l _ k r) = toDescList l ++ [k] ++ toDescList r
+toAscList (Node l _ k r) = toAscList l ++ [k] ++ toAscList r
 
 toDescList :: Set a -> [a]
 toDescList Nil = []
