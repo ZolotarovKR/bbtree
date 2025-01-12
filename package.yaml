@@ -1,0 +1,38 @@
+name:                bbtree
+version:             0.1.0.0
+github:              "ZolotarovKR/bbtree"
+license:             MIT
+author:              "Kiril Zolotarov"
+maintainer:          "zolotarovkr@gmail.com"
+copyright:           "2025 Kiril Zolotarov"
+extra-source-files:  []
+# synopsis:            Short description of your package
+# category:            Web
+# description:         Please see the README on GitHub at <https://github.com/ZolotarovKR/bbtree#readme>
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+tests:
+  bbset-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - bbtree
